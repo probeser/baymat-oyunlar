@@ -7,135 +7,58 @@
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap');
 
   :root{
-    --navy:#152238;
-    --navy-2:#1e3358;
-    --paper:#EEF1F6;
-    --card:#FFFFFF;
-    --gold:#E8A33D;
-    --gold-dim:#f6d9a3;
-    --teal:#2E8B87;
-    --teal-dim:#d7ece9;
-    --ink:#152238;
-    --ink-soft:#5b6b85;
-    --line:#dde3ee;
+    --navy:#152238; --navy-2:#1e3358; --paper:#EEF1F6; --card:#FFFFFF;
+    --gold:#E8A33D; --gold-dim:#f6d9a3; --teal:#2E8B87; --teal-dim:#d7ece9;
+    --ink:#152238; --ink-soft:#5b6b85; --line:#dde3ee;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Manrope',sans-serif;
-    line-height:1.5;
-  }
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Manrope',sans-serif;line-height:1.5;}
   .wrap{max-width:1080px;margin:0 auto;padding:32px 20px 80px;}
 
-  /* HERO */
-  .hero{
-    background:radial-gradient(120% 140% at 15% 0%, var(--navy-2) 0%, var(--navy) 55%, #0e1729 100%);
-    border-radius:28px;
-    padding:40px 32px;
-    color:#fff;
-    position:relative;
-    overflow:hidden;
-    margin-bottom:28px;
-  }
-  .hero::after{
-    content:"";
-    position:absolute; right:-60px; top:-60px; width:260px; height:260px;
-    border-radius:50%;
-    border:1.5px dashed rgba(232,163,61,.35);
-  }
-  .hero::before{
-    content:"";
-    position:absolute; right:10px; top:40px; width:120px; height:120px;
-    border-radius:50%;
-    border:1.5px dashed rgba(46,139,135,.35);
-  }
-  .eyebrow{
-    display:inline-flex; align-items:center; gap:8px;
-    font-family:'JetBrains Mono',monospace;
-    font-size:12.5px; letter-spacing:.04em;
-    color:var(--gold-dim);
-    background:rgba(232,163,61,.12);
-    border:1px solid rgba(232,163,61,.3);
-    padding:5px 12px; border-radius:999px;
-    margin-bottom:16px;
-  }
+  .hero{background:radial-gradient(120% 140% at 15% 0%, var(--navy-2) 0%, var(--navy) 55%, #0e1729 100%);border-radius:28px;padding:40px 32px;color:#fff;position:relative;overflow:hidden;margin-bottom:28px;}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;border:1.5px dashed rgba(232,163,61,.35);}
+  .hero::before{content:"";position:absolute;right:10px;top:40px;width:120px;height:120px;border-radius:50%;border:1.5px dashed rgba(46,139,135,.35);}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:.04em;color:var(--gold-dim);background:rgba(232,163,61,.12);border:1px solid rgba(232,163,61,.3);padding:5px 12px;border-radius:999px;margin-bottom:16px;}
   .needle{width:7px;height:7px;background:var(--gold);border-radius:50%;box-shadow:0 0 0 3px rgba(232,163,61,.25);}
-  h1{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:clamp(28px,4vw,40px);
-    line-height:1.12;
-    margin:0 0 12px;
-    max-width:640px;
-  }
-  .hero p{color:#c3cde0;max-width:520px;margin:0;font-size:15.5px;}
+  h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,40px);line-height:1.12;margin:0 0 12px;max-width:640px;}
+  .hero p{color:#c3cde0;max-width:560px;margin:0;font-size:15.5px;}
 
-  /* AI BÖLÜMÜ */
-  .section-label{
-    font-family:'JetBrains Mono',monospace;
-    font-size:12px;letter-spacing:.06em;text-transform:uppercase;
-    color:var(--ink-soft);
-    display:flex;align-items:center;gap:10px;
-    margin:40px 0 14px;
-  }
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);display:flex;align-items:center;gap:10px;margin:40px 0 14px;}
   .section-label::after{content:"";flex:1;height:1px;background:var(--line);}
 
   .ai-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;}
-  .ai-card{
-    background:linear-gradient(155deg,var(--navy) 0%, var(--navy-2) 100%);
-    color:#fff;border-radius:18px;padding:20px;
-    position:relative; overflow:hidden;
-    border:1px solid rgba(232,163,61,.25);
-  }
-  .ai-card .tag{
-    font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold-dim);
-    background:rgba(232,163,61,.15);display:inline-block;padding:3px 9px;border-radius:999px;margin-bottom:10px;
-  }
+  .ai-card{background:linear-gradient(155deg,var(--navy) 0%, var(--navy-2) 100%);color:#fff;border-radius:18px;padding:20px;position:relative;overflow:hidden;border:1px solid rgba(232,163,61,.25);}
+  .ai-card .tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold-dim);background:rgba(232,163,61,.15);display:inline-block;padding:3px 9px;border-radius:999px;margin-bottom:10px;}
   .ai-card h3{font-family:'Space Grotesk',sans-serif;font-size:17px;margin:0 0 6px;}
   .ai-card p{color:#aeb9cf;font-size:13.5px;margin:0;}
   .soon{position:absolute;top:16px;right:16px;font-size:11px;color:#8a97b3;font-family:'JetBrains Mono',monospace;}
 
-  /* SEKMELER */
   .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 26px;}
-  .tab{
-    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14.5px;
-    padding:9px 18px;border-radius:12px;border:1.5px solid var(--line);
-    background:var(--card);color:var(--ink-soft);cursor:pointer;
-    transition:.15s;
-  }
+  .tab{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14.5px;padding:9px 18px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink-soft);cursor:pointer;transition:.15s;}
   .tab.active{background:var(--navy);color:#fff;border-color:var(--navy);}
   .tab:hover:not(.active){border-color:var(--gold);color:var(--ink);}
 
-  /* KONU GRUPLARI */
   .topic-group{margin-bottom:28px;}
   .topic-head{display:flex;align-items:baseline;gap:10px;margin-bottom:12px;}
   .topic-head .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);}
   .topic-head h2{font-family:'Space Grotesk',sans-serif;font-size:18px;margin:0;}
   .topic-head span{font-size:12.5px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;}
 
-  .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;}
-  .card{
-    background:var(--card);border:1px solid var(--line);border-radius:16px;
-    padding:16px;transition:.15s; text-decoration:none; color:inherit; display:block;
-  }
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;transition:.15s;text-decoration:none;color:inherit;display:block;}
   .card:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:0 8px 20px rgba(21,34,56,.08);}
-  .card .lvl{
-    font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--teal);
-    background:var(--teal-dim);display:inline-block;padding:2px 8px;border-radius:6px;margin-bottom:9px;
-  }
+  .card .lvl{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--teal);background:var(--teal-dim);display:inline-block;padding:2px 8px;border-radius:6px;margin-bottom:9px;}
+  .card .lvl.repeat{color:var(--navy);background:var(--gold-dim);}
   .card h3{font-family:'Space Grotesk',sans-serif;font-size:15px;margin:0 0 6px;line-height:1.3;}
-  .card p{font-size:12.8px;color:var(--ink-soft);margin:0;}
-  .card .src{margin-top:10px;font-size:11px;color:#98a3ba;font-family:'JetBrains Mono',monospace;}
+  .card p{font-size:12.6px;color:var(--ink-soft);margin:0 0 8px;}
+  .card .goal{font-size:12px;color:#1f5652;background:var(--teal-dim);border-radius:8px;padding:6px 9px;margin:0 0 8px;line-height:1.35;}
+  .card .goal b{font-weight:700;}
+  .card .src{margin-top:2px;font-size:11px;color:#98a3ba;font-family:'JetBrains Mono',monospace;}
 
   .grade-panel{display:none;}
   .grade-panel.active{display:block;}
 
-  .note{
-    margin-top:36px;padding:16px 18px;border-radius:14px;
-    background:var(--teal-dim);border:1px solid #bfe0dc;
-    font-size:13px;color:#1f5652;
-  }
+  .note{margin-top:36px;padding:16px 18px;border-radius:14px;background:var(--teal-dim);border:1px solid #bfe0dc;font-size:13px;color:#1f5652;}
 </style>
 </head>
 <body>
@@ -144,55 +67,74 @@
   <div class="hero">
     <div class="eyebrow"><span class="needle"></span>DİJİTAL MATEMATİK PUSULASI</div>
     <h1>Dijital Oyunlarla Öğrenme</h1>
-    <p>Sınıfını seç, konunu bul. Her oyun; seviyesine ve konusuna göre gruplanmış, karışıklık yok.</p>
+    <p>Sınıfını seç, konunu bul. Her kartta <b>"🎯 Bunu öğreniyorsun"</b> satırı var — oynarken hangi matematik becerisini kazandığını fark et. Bir konu birden fazla sınıfı ilgilendiriyorsa, o oyun ilgili her sınıfta görünür.</p>
   </div>
 
   <div class="section-label">Bizim Oyunlarımız</div>
   <div class="ai-grid">
-    <div class="ai-card">
-      <span class="soon">Yakında</span>
-      <span class="tag">AI DESTEKLİ</span>
-      <h3>Kesirler Macerası</h3>
-      <p>Yapay zekâ, öğrencinin hatasına göre zorluğu otomatik ayarlar. 5-6. sınıf.</p>
-    </div>
-    <div class="ai-card">
-      <span class="soon">Yakında</span>
-      <span class="tag">AI DESTEKLİ</span>
-      <h3>Cebir Dedektifi</h3>
-      <p>Denklem çözerken ipucu isteyince AI adım adım yönlendirir. 7-8. sınıf.</p>
-    </div>
-    <div class="ai-card">
-      <span class="soon">Yakında</span>
-      <span class="tag">AI DESTEKLİ</span>
-      <h3>LGS Hız Turu</h3>
-      <p>Kişiye özel soru üretimiyle zayıf konuya göre pratik. 8. sınıf.</p>
-    </div>
+    <div class="ai-card"><span class="soon">Yakında</span><span class="tag">AI DESTEKLİ</span><h3>Kesirler Macerası</h3><p>Yapay zekâ, öğrencinin hatasına göre zorluğu otomatik ayarlar. 5-6. sınıf.</p></div>
+    <div class="ai-card"><span class="soon">Yakında</span><span class="tag">AI DESTEKLİ</span><h3>Cebir Dedektifi</h3><p>Denklem çözerken ipucu isteyince AI adım adım yönlendirir. 7-8. sınıf.</p></div>
+    <div class="ai-card"><span class="soon">Yakında</span><span class="tag">AI DESTEKLİ</span><h3>LGS Hız Turu</h3><p>Kişiye özel soru üretimiyle zayıf konuya göre pratik. 8. sınıf.</p></div>
   </div>
 
   <div class="section-label">Hazır Araçlar — Sınıfına Göre</div>
   <div class="tabs">
-    <button class="tab active" data-grade="5">5. Sınıf</button>
+    <button class="tab active" data-grade="3">3-4. Sınıf</button>
+    <button class="tab" data-grade="5">5. Sınıf</button>
     <button class="tab" data-grade="6">6. Sınıf</button>
     <button class="tab" data-grade="7">7. Sınıf</button>
     <button class="tab" data-grade="8">8. Sınıf</button>
     <button class="tab" data-grade="9">9-10. Sınıf <span style="opacity:.6">(çalışma kağıdı)</span></button>
   </div>
 
-  <!-- 5. SINIF -->
-  <div class="grade-panel active" id="grade-5">
+  <!-- 3-4 SINIF -->
+  <div class="grade-panel active" id="grade-3">
     <div class="topic-group">
-      <div class="topic-head"><span class="dot"></span><h2>Basamak Değeri & Doğal Sayılar</h2><span>2 araç</span></div>
+      <div class="topic-head"><span class="dot"></span><h2>Dört İşlem</h2><span>3 araç</span></div>
       <div class="card-grid">
-        <a class="card" href="https://www.topmarks.co.uk/place-value/moving-digit-cards" target="_blank"><span class="lvl">5. SINIF</span><h3>Moving Digit Cards</h3><p>Sayı basamaklarını sürükleyerek 10, 100, 1000 ile çarpma/bölmeyi keşfet.</p><span class="src">topmarks.co.uk</span></a>
-        <a class="card" href="https://www.matematikvakti.net/7-12-basamakli-sayi-eslestirme-oyunu-okunus-ve-yazilis/" target="_blank"><span class="lvl">5. SINIF</span><h3>7–12 Basamaklı Sayı Eşleştirme</h3><p>Büyük sayıları okunuşuyla eşleştir, hız ve doğruluk kazan.</p><span class="src">matematikvakti.net</span></a>
+        <a class="card" href="https://www.topmarks.co.uk/maths-games/mental-maths-train" target="_blank"><span class="lvl">3-4. SINIF</span><h3>Mental Maths Train</h3><p>Toplama, çıkarma, çarpma, bölme işlemlerinin sözel ifadelerini tanı.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Problemde "fazlası", "azı", "kat", "paylaştır" gibi ifadelerin hangi işleme karşılık geldiğini.</div><span class="src">topmarks.co.uk</span></a>
+        <a class="card" href="https://www.topmarks.co.uk/maths-games/hit-the-button" target="_blank"><span class="lvl">3-4. SINIF</span><h3>Hit the Button</h3><p>Zamana karşı hızlı işlem sorularıyla çarpım tablosu pratiği.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Çarpım tablosunu ve bölme bilgini hızlı ve doğru hatırlamayı.</div><span class="src">topmarks.co.uk</span></a>
+        <a class="card" href="https://tahta.akilliuslu.com/matematik-oyunlari" target="_blank"><span class="lvl">3-4. SINIF</span><h3>Akıllı Tahta Matematik Oyunları</h3><p>51 ücretsiz oyun: toplama-çıkarma, çarpım tablosu, sayı sıralama, kesir, saat.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Birçok temel konuyu (dört işlem, kesir, saat) tek sayfada tekrar ederek nerede zayıf olduğunu.</div><span class="src">akilliuslu.com</span></a>
       </div>
     </div>
     <div class="topic-group">
-      <div class="topic-head"><span class="dot" style="background:var(--gold)"></span><h2>Simetri & Geometri</h2><span>3 araç</span></div>
+      <div class="topic-head"><span class="dot" style="background:var(--gold)"></span><h2>Sayı Yuvarlama & Basamak Değeri</h2><span>2 araç</span></div>
       <div class="card-grid">
-        <a class="card" href="https://www.topmarks.co.uk/symmetry/symmetry-matching" target="_blank"><span class="lvl">5. SINIF</span><h3>Symmetry Matching</h3><p>Aynadaki yansımayı tamamlayarak simetri kavramını pekiştir.</p><span class="src">topmarks.co.uk</span></a>
-        <a class="card" href="https://toytheater.com/mirror/" target="_blank"><span class="lvl">5. SINIF</span><h3>Mirror — Toy Theater</h3><p>Ayna çizim aracıyla dengeli desenler oluşturarak yansımayı öğren.</p><span class="src">toytheater.com</span></a>
-        <a class="card" href="https://toytheater.com/twirl/" target="_blank"><span class="lvl">5. SINIF</span><h3>Twirl — Toy Theater</h3><p>Döndürme simetrisini eğlenceli bir çizim aracıyla deneyimle.</p><span class="src">toytheater.com</span></a>
+        <a class="card" href="https://www.topmarks.co.uk/maths-games/rocket-rounding" target="_blank"><span class="lvl">3-4. SINIF</span><h3>Rocket Rounding</h3><p>Sayıları en yakın onluğa, yüzlüğe ve tam sayıya yuvarlama pratiği.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Bir sayıyı yuvarlarken hangi basamağa bakman ve ne zaman yukarı/aşağı yuvarlaman gerektiğini.</div><span class="src">topmarks.co.uk</span></a>
+        <a class="card" href="https://www.topmarks.co.uk/place-value/moving-digit-cards" target="_blank"><span class="lvl repeat">5. SINIF KONUSU</span><h3>Moving Digit Cards</h3><p>Basamak kartlarını sürükleyerek 10, 100, 1000 ile çarpma/bölmeyi keşfet.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Bir sayı 10 katına çıkınca basamakların neden sola kaydığını.</div><span class="src">topmarks.co.uk</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. SINIF -->
+  <div class="grade-panel" id="grade-5">
+    <div class="topic-group">
+      <div class="topic-head"><span class="dot"></span><h2>Basamak Değeri & Doğal Sayılar</h2><span>2 araç</span></div>
+      <div class="card-grid">
+        <a class="card" href="https://www.topmarks.co.uk/place-value/moving-digit-cards" target="_blank"><span class="lvl">5. SINIF</span><h3>Moving Digit Cards</h3><p>Basamak kartlarını sürükleyerek 10, 100, 1000 ile çarpma/bölmeyi keşfet.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Çarpma/bölme ile basamakların kayma mantığını ileri seviyede tekrar.</div><span class="src">topmarks.co.uk</span></a>
+        <a class="card" href="https://www.matematikvakti.net/7-12-basamakli-sayi-eslestirme-oyunu-okunus-ve-yazilis/" target="_blank"><span class="lvl">5. SINIF</span><h3>7–12 Basamaklı Sayı Eşleştirme</h3><p>Büyük sayıları okunuşuyla eşleştir, hız ve doğruluk kazan.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Büyük sayıları (binler, milyonlar) doğru okuyup basamak adlarıyla eşleştirmeyi.</div><span class="src">matematikvakti.net</span></a>
+      </div>
+    </div>
+    <div class="topic-group">
+      <div class="topic-head"><span class="dot" style="background:var(--gold)"></span><h2>Kesirler</h2><span>1 araç</span></div>
+      <div class="card-grid">
+        <a class="card" href="https://www.transum.org/Maths/Activity/PhET/Fraction_Matcher.asp" target="_blank"><span class="lvl">5. SINIF</span><h3>Fraction Matcher (PhET)</h3><p>Dünyada en çok kullanılan kesir simülasyonu — şekil, sayı ve ondalık gösterimi eşleştir.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Aynı kesrin şekil, kesir yazımı ve ondalık (0.5 gibi) hâllerinin aynı değeri ifade ettiğini.</div><span class="src">transum.org / PhET</span></a>
+      </div>
+    </div>
+    <div class="topic-group">
+      <div class="topic-head"><span class="dot" style="background:var(--teal)"></span><h2>Geometrik Çizim & Simetri</h2><span>3 araç</span></div>
+      <div class="card-grid">
+        <a class="card" href="https://aksiyom.com/dogru-isin-ve-dogru-parcasi-oyunu/" target="_blank"><span class="lvl">5. SINIF</span><h3>Doğru Işın Doğru Parçası Oyunu</h3><p>Geometrik çizim kavramlarını Maarif Modeline uygun şekilde pekiştir.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Nokta, doğru, doğru parçası ve ışın arasındaki farkı görsel olarak ayırt etmeyi.</div><span class="src">aksiyom.com</span></a>
+        <a class="card" href="https://www.topmarks.co.uk/symmetry/symmetry-matching" target="_blank"><span class="lvl">5. SINIF</span><h3>Symmetry Matching</h3><p>Aynadaki yansımayı tamamlayarak simetri kavramını pekiştir.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Bir şeklin simetri eksenine göre yansımasının tam olarak neye benzediğini.</div><span class="src">topmarks.co.uk</span></a>
+        <a class="card" href="https://toytheater.com/mirror/" target="_blank"><span class="lvl">5. SINIF</span><h3>Mirror — Toy Theater</h3><p>Ayna çizim aracıyla dengeli desenler oluşturarak yansımayı öğren.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Bir deseni çizip ayna simetrisiyle tamamlarken simetri eksenini kendi elinle keşfetmeyi.</div><span class="src">toytheater.com</span></a>
+      </div>
+    </div>
+    <div class="topic-group">
+      <div class="topic-head"><span class="dot"></span><h2>Çarpma & Çarpım Tablosu Pratiği</h2><span>3 araç</span></div>
+      <div class="card-grid">
+        <a class="card" href="https://www.matematikvakti.net/sebahattin-soylu-carpma-oyunu/" target="_blank"><span class="lvl">5. SINIF</span><h3>Sebahattin Soylu Çarpma Oyunu</h3><p>Online çarpım tablosu pratiğiyle işlem hızını artır.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Çarpım tablosunu hız ve doğrulukla kullanmayı.</div><span class="src">matematikvakti.net</span></a>
+        <a class="card" href="https://www.matematikvakti.net/iki-kisilik-carpim-tablosu-oyunu/" target="_blank"><span class="lvl">5. SINIF</span><h3>İki Kişilik Çarpım Tablosu</h3><p>Sınıf arkadaşınla aynı anda yarışarak çarpım tablosunu pekiştir.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Çarpım tablosu bilgini bir arkadaşınla rekabet ederek sınamayı.</div><span class="src">matematikvakti.net</span></a>
+        <a class="card" href="https://view.genially.com/690355c374638634d41e3a7f" target="_blank"><span class="lvl">5. SINIF</span><h3>Multiplication Quiz</h3><p>İnteraktif quiz ile çarpma işlem hızını test et.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Çarpma işlemlerini hızlı ve doğru yapma becerini nasıl geliştirdiğini.</div><span class="src">genially.com</span></a>
       </div>
     </div>
   </div>
@@ -200,16 +142,23 @@
   <!-- 6. SINIF -->
   <div class="grade-panel" id="grade-6">
     <div class="topic-group">
-      <div class="topic-head"><span class="dot"></span><h2>Çarpma & Çarpım Tablosu</h2><span>2 araç</span></div>
+      <div class="topic-head"><span class="dot"></span><h2>Çarpanlar, Katlar & Asal Sayılar</h2><span>2 araç</span></div>
       <div class="card-grid">
-        <a class="card" href="https://www.matematikvakti.net/sebahattin-soylu-carpma-oyunu/" target="_blank"><span class="lvl">6. SINIF</span><h3>Sebahattin Soylu Çarpma Oyunu</h3><p>Online çarpım tablosu pratiğiyle işlem hızını artır.</p><span class="src">matematikvakti.net</span></a>
-        <a class="card" href="https://www.matematikvakti.net/iki-kisilik-carpim-tablosu-oyunu/" target="_blank"><span class="lvl">6. SINIF</span><h3>İki Kişilik Çarpım Tablosu</h3><p>Sınıf arkadaşınla aynı anda yarışarak çarpım tablosunu pekiştir.</p><span class="src">matematikvakti.net</span></a>
+        <a class="card" href="https://www.transum.org/Maths/Game/Primes/Pick.asp?Level=2" target="_blank"><span class="lvl">6. SINIF</span><h3>Pick the Primes</h3><p>Ağaçtan asal sayı meyvelerini hızlıca topla.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Bir sayının asal olup olmadığını hızlıca ayırt etmeyi.</div><span class="src">transum.org</span></a>
+        <a class="card" href="https://www.matematikvakti.net/asal-carpani-midir-asal-carpan-bulma-matematik-oyunu/" target="_blank"><span class="lvl">6. SINIF</span><h3>Asal Çarpanı Mıdır?</h3><p>90 saniyede asal çarpanları bul, skorunu yükselt.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Bir sayıyı asal çarpanlarına ayırma becerini — 8. sınıfta karekök konusunun temeli bu.</div><span class="src">matematikvakti.net</span></a>
       </div>
     </div>
     <div class="topic-group">
-      <div class="topic-head"><span class="dot" style="background:var(--gold)"></span><h2>Geometrik Şekiller</h2><span>1 araç</span></div>
+      <div class="topic-head"><span class="dot" style="background:var(--gold)"></span><h2>Çevre & Alan</h2><span>1 araç</span></div>
       <div class="card-grid">
-        <a class="card" href="https://www.logicieleducatif.fr/jeux/domaine/geometrie" target="_blank"><span class="lvl">6. SINIF</span><h3>Geometri Oyunları</h3><p>Şekil ve alan konularında Fransızca kaynaklı ama görsel-ağırlıklı alıştırmalar.</p><span class="src">logicieleducatif.fr</span></a>
+        <a class="card" href="https://transum.org/Maths/Activity/PhET/Area_Builder.asp" target="_blank"><span class="lvl">6. SINIF</span><h3>Area Builder (PhET)</h3><p>Renkli karelerle şekiller oluşturup alan-çevre ilişkisini keşfet, puan topla.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Aynı çevreye sahip şekillerin neden farklı alanlara sahip olabileceğini.</div><span class="src">transum.org / PhET</span></a>
+      </div>
+    </div>
+    <div class="topic-group">
+      <div class="topic-head"><span class="dot" style="background:var(--teal)"></span><h2>Geometri & Genel Pratik</h2><span>2 araç</span></div>
+      <div class="card-grid">
+        <a class="card" href="https://www.logicieleducatif.fr/jeux/domaine/geometrie" target="_blank"><span class="lvl">6. SINIF</span><h3>Geometri Oyunları</h3><p>Şekil ve alan konularında görsel ağırlıklı alıştırmalar.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Temel geometrik şekillerin özelliklerini görsel alıştırmalarla pekiştirmeyi.</div><span class="src">logicieleducatif.fr</span></a>
+        <a class="card" href="https://www.logicieleducatif.fr/niveau/college" target="_blank"><span class="lvl">6. SINIF</span><h3>Ortaokul Seviyesi Genel Alıştırmalar</h3><p>Tüm ortaokul konularını kapsayan geniş oyun/alıştırma arşivi.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Hangi konularda daha fazla pratiğe ihtiyacın olduğunu kendi kendine test ederek.</div><span class="src">logicieleducatif.fr</span></a>
       </div>
     </div>
   </div>
@@ -217,16 +166,23 @@
   <!-- 7. SINIF -->
   <div class="grade-panel" id="grade-7">
     <div class="topic-group">
-      <div class="topic-head"><span class="dot"></span><h2>Asal Sayılar & Çarpanlar</h2><span>2 araç</span></div>
+      <div class="topic-head"><span class="dot" style="background:var(--teal)"></span><h2>Oran-Orantı & Yüzde</h2><span>2 araç</span></div>
       <div class="card-grid">
-        <a class="card" href="https://www.transum.org/Maths/Game/Primes/Pick.asp?Level=2" target="_blank"><span class="lvl">7. SINIF</span><h3>Pick the Primes</h3><p>Ağaçtan asal sayı meyvelerini hızlıca topla.</p><span class="src">transum.org</span></a>
-        <a class="card" href="https://www.matematikvakti.net/asal-carpani-midir-asal-carpan-bulma-matematik-oyunu/" target="_blank"><span class="lvl">7. SINIF</span><h3>Asal Çarpanı Mıdır?</h3><p>90 saniyede asal çarpanları bul, skorunu yükselt.</p><span class="src">matematikvakti.net</span></a>
+        <a class="card" href="https://www.transum.org/software/SW/Starter_of_the_day/Students/Ratio.asp?Level=1" target="_blank"><span class="lvl">7. SINIF</span><h3>Ratio (Transum)</h3><p>Oranı sadeleştir, bir miktarı verilen orana göre paylaştır.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Bir oranı en sade haline getirmeyi ve bir miktarı doğru şekilde paylaştırmayı.</div><span class="src">transum.org</span></a>
+        <a class="card" href="https://www.transum.org/go/Bounce.asp?to=fraper" target="_blank"><span class="lvl">7. SINIF</span><h3>Fraction Percentage Matching</h3><p>Kesir ve yüzde kartlarını sürükleyip doğru eşleştir.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Bir kesrin yüzde karşılığını (ve tersini) hızlıca bulmayı.</div><span class="src">transum.org</span></a>
       </div>
     </div>
     <div class="topic-group">
-      <div class="topic-head"><span class="dot" style="background:var(--teal)"></span><h2>Olasılık</h2><span>1 araç</span></div>
+      <div class="topic-head"><span class="dot"></span><h2>Olasılık</h2><span>1 araç</span></div>
       <div class="card-grid">
-        <a class="card" href="https://wordwall.net/resource/76579961/probability-match-up" target="_blank"><span class="lvl">7. SINIF</span><h3>Probability Match Up</h3><p>Olasılık terimlerini tanımlarıyla eşleştir.</p><span class="src">wordwall.net</span></a>
+        <a class="card" href="https://wordwall.net/resource/76579961/probability-match-up" target="_blank"><span class="lvl">7. SINIF</span><h3>Probability Match Up</h3><p>Olasılık terimlerini tanımlarıyla eşleştir.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> "Kesin", "imkânsız", "eşit olasılıklı" gibi olasılık terimlerinin ne anlama geldiğini.</div><span class="src">wordwall.net</span></a>
+      </div>
+    </div>
+    <div class="topic-group">
+      <div class="topic-head"><span class="dot" style="background:var(--gold)"></span><h2>Konu Bazlı Adaptif Alıştırma & Geometri</h2><span>2 araç</span></div>
+      <div class="card-grid">
+        <a class="card" href="https://www.matific.com/tr/tr/home/maths/grade-7/" target="_blank"><span class="lvl">7. SINIF</span><h3>Matific — 7. Sınıf</h3><p>Konu bazlı adaptif alıştırma platformu, 7. sınıf müfredatına özel.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Kendi hızında, seviyene uygun sorularla eksiklerini tamamlamayı.</div><span class="src">matific.com</span></a>
+        <a class="card" href="https://www.geogebra.org/classic" target="_blank"><span class="lvl">7. SINIF</span><h3>GeoGebra Classic</h3><p>Geometrik dönüşümleri ve fonksiyonları interaktif çiz.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Bir geometrik şekli çizip dönüştürdüğünde ilişkilerin nasıl değiştiğini.</div><span class="src">geogebra.org</span></a>
       </div>
     </div>
   </div>
@@ -234,17 +190,31 @@
   <!-- 8. SINIF -->
   <div class="grade-panel" id="grade-8">
     <div class="topic-group">
-      <div class="topic-head"><span class="dot"></span><h2>Cebir & Genel Pratik</h2><span>2 araç</span></div>
+      <div class="topic-head"><span class="dot"></span><h2>Çarpanlara Ayırma, Üslü Sayılar & Karekök</h2><span>2 araç</span></div>
       <div class="card-grid">
-        <a class="card" href="https://view.genially.com/690355c374638634d41e3a7f" target="_blank"><span class="lvl">8. SINIF</span><h3>Multiplication Quiz</h3><p>LGS öncesi hızlı işlem pratiği için interaktif quiz.</p><span class="src">genially.com</span></a>
-        <a class="card" href="https://www.matific.com/tr/tr/home/maths/grade-7/" target="_blank"><span class="lvl">8. SINIF</span><h3>Matific — 7-8. Sınıf</h3><p>Konu bazlı adaptif alıştırma platformu.</p><span class="src">matific.com</span></a>
+        <a class="card" href="https://www.matematikvakti.net/asal-carpani-midir-asal-carpan-bulma-matematik-oyunu/" target="_blank"><span class="lvl repeat">6. SINIF KONUSU</span><h3>Asal Çarpanı Mıdır?</h3><p>6. sınıfta öğrenilen asal çarpanları LGS'ye hazırlık için tekrar et.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Asal çarpanlara ayırmanın karekök bulmanın ilk adımı olduğunu.</div><span class="src">matematikvakti.net</span></a>
+        <a class="card" href="https://www.transum.org/go/?to=scroots" target="_blank"><span class="lvl">8. SINIF</span><h3>Square and Cube Roots (Transum)</h3><p>Önce asal çarpanlarına ayırarak bir sayının karekökünü/küpkökünü bul.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Asal çarpanlara ayırma ile karekök bulmanın birbirine nasıl bağlı olduğunu.</div><span class="src">transum.org</span></a>
       </div>
     </div>
     <div class="topic-group">
-      <div class="topic-head"><span class="dot" style="background:var(--gold)"></span><h2>Geometri & Görselleştirme</h2><span>2 araç</span></div>
+      <div class="topic-head"><span class="dot" style="background:var(--teal)"></span><h2>Olasılık (LGS Tekrar)</h2><span>1 araç</span></div>
       <div class="card-grid">
-        <a class="card" href="https://www.geogebra.org/classic" target="_blank"><span class="lvl">8. SINIF</span><h3>GeoGebra Classic</h3><p>Geometrik dönüşümleri ve fonksiyonları interaktif çiz.</p><span class="src">geogebra.org</span></a>
-        <a class="card" href="https://tr.mathigon.org/" target="_blank"><span class="lvl">8. SINIF</span><h3>Mathigon</h3><p>İnteraktif matematiksel oyun alanı, keşfederek öğrenme.</p><span class="src">mathigon.org</span></a>
+        <a class="card" href="https://wordwall.net/resource/76579961/probability-match-up" target="_blank"><span class="lvl repeat">7. SINIF KONUSU</span><h3>Probability Match Up</h3><p>7. sınıf olasılık konusunu LGS seviyesinde tekrar et.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Olasılık terimlerini LGS sorularında hızlıca tanıyabilmeyi.</div><span class="src">wordwall.net</span></a>
+      </div>
+    </div>
+    <div class="topic-group">
+      <div class="topic-head"><span class="dot" style="background:var(--gold)"></span><h2>Geometrik Cisimler & Dörtgenler</h2><span>3 araç</span></div>
+      <div class="card-grid">
+        <a class="card" href="https://sites.google.com/view/uc-boyutlu-sekiller/ana-sayfa_1" target="_blank"><span class="lvl">8. SINIF</span><h3>Prizmalar</h3><p>Üç boyutlu şekilleri interaktif inceleyerek prizma kavramını pekiştir.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Bir prizmanın yüz, kenar ve köşe sayıları arasındaki ilişkiyi.</div><span class="src">sites.google.com</span></a>
+        <a class="card" href="https://bdemir1499.github.io/GEOMETRI-ARAC-SETI-2.2/" target="_blank"><span class="lvl">8. SINIF</span><h3>Dijital Tahta — Geometri Araç Seti</h3><p>Geometrik çizim ve ölçüm için dijital tahta araç seti.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Geometrik çizimlerini dijital araçlarla nasıl doğrulayabileceğini.</div><span class="src">bdemir1499.github.io</span></a>
+        <a class="card" href="https://bekrmatmt25.my.canva.site/kosegenlerden-dortgenlere" target="_blank"><span class="lvl">8. SINIF</span><h3>Köşegenlerden Dörtgenlere</h3><p>Köşegen özelliklerinden hareketle dörtgen türlerini keşfet.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Bir dörtgenin köşegen özelliklerinden türünü (kare, dikdörtgen, eşkenar dörtgen) nasıl ayırt edeceğini.</div><span class="src">canva.site</span></a>
+      </div>
+    </div>
+    <div class="topic-group">
+      <div class="topic-head"><span class="dot"></span><h2>Genel LGS Pratiği</h2><span>2 araç</span></div>
+      <div class="card-grid">
+        <a class="card" href="https://www.geogebra.org/classic" target="_blank"><span class="lvl repeat">7. SINIF KONUSU</span><h3>GeoGebra Classic</h3><p>Geometrik dönüşüm ve fonksiyon çalışmaları için interaktif araç.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Fonksiyon ve dönüşüm geometrisi konularını interaktif çizerek.</div><span class="src">geogebra.org</span></a>
+        <a class="card" href="https://tr.mathigon.org/" target="_blank"><span class="lvl">8. SINIF</span><h3>Mathigon</h3><p>İnteraktif matematiksel oyun alanı, keşfederek öğrenme.</p><div class="goal">🎯 <b>Bunu öğreniyorsun:</b> Farklı matematik konularını keşfederek, ezberlemeden anlamayı.</div><span class="src">mathigon.org</span></a>
       </div>
     </div>
   </div>
@@ -260,7 +230,7 @@
     </div>
   </div>
 
-  <div class="note">Tüm oyun linkleri gerçek ve tıklanabilir (yeni sekmede açılır). "Bizim Oyunlarımız" bölümündeki 3 kart, AI destekli oyunlarınız hazır olduğunda gerçek linklerle değiştirilecek yer tutuculardır.</div>
+  <div class="note">Her kartta teal renkli "🎯 Bunu öğreniyorsun" kutusu, oyunun kazandırdığı somut matematik becerisini açıklar. Altın renkli "X. SINIF KONUSU" etiketi, konunun asıl işlendiği sınıfı gösterir (burada tekrar amaçlı). "Fraction Matcher" ve "Area Builder" dünyaca tanınan PhET Interactive Simulations (University of Colorado Boulder) simülasyonlarıdır; "Ratio", "Fraction Percentage Matching" ve "Square and Cube Roots" ise milyonlarca öğrencinin kullandığı Transum.org kaynaklarıdır.</div>
 
 </div>
 <script>
